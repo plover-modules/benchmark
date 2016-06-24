@@ -1,0 +1,33 @@
+{
+  "name": "benchmark",
+  "version": "1.0.0",
+  "description": "plover性能测试",
+  "scripts": {
+  },
+  "dependencies": {
+    "plover": "~2.2.1",
+    "plover-arttemplate": "~1.2.0",
+    "plover-assets": "~2.1.0",
+    "plover-assets-less": "~1.2.1",
+    "plover-assets-vendor": "~1.0.3",
+    "plover-assets-webpack": "~1.1.0",
+    "plover-benchmark": "~1.0.0",
+    "plover-ejs": "~1.0.0",
+    "plover-web-util": "~1.0.0",
+    "plover-xview": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "~2.13.0",
+    "eslint-config-bce": "~1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plover-modules/benchmark.git"
+  },
+  "author": "bencode@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plover-modules/benchmark/issues"
+  },
+  "homepage": "https://github.com/plover-modules/benchmark#readme"
+}
