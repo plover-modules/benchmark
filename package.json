@@ -2,8 +2,7 @@
   "name": "benchmark",
   "version": "1.0.0",
   "description": "plover性能测试",
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
     "plover": "~2.2.1",
     "plover-arttemplate": "~1.2.0",
@@ -13,6 +12,7 @@
     "plover-assets-webpack": "~1.1.0",
     "plover-benchmark": "~1.0.0",
     "plover-ejs": "~1.0.0",
+    "plover-util": "~1.4.0",
     "plover-web-util": "~1.0.0",
     "plover-xview": "~1.1.0"
   },
