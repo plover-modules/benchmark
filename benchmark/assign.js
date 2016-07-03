@@ -8,7 +8,7 @@ const suite = new Suite();
 
 
 
-const t1kk = 1 * 1000 * 1000;
+const NUM = 1 * 1000 * 1000;
 
 const o = {
   a: 1,
@@ -25,7 +25,7 @@ const o = {
 
 
 suite.mark('Object.assign', () => {
-  for (let i = 0; i < t1kk; i++) {
+  for (let i = 0; i < NUM; i++) {
     Object.assign({}, o);
   }
 });
@@ -38,7 +38,7 @@ function assignA(des, src) {
 }
 
 suite.mark('assignA', () => {
-  for (let i = 0; i < t1kk; i++) {
+  for (let i = 0; i < NUM; i++) {
     assignA({}, o);
   }
 });
@@ -54,14 +54,14 @@ function assignB(des, src) {
 
 
 suite.mark('assignB', () => {
-  for (let i = 0; i < t1kk; i++) {
+  for (let i = 0; i < NUM; i++) {
     assignB({}, o);
   }
 });
 
 
 suite.mark('plover-util/lib/assign', function() {
-  for (let i = 0; i < t1kk; i++) {
+  for (let i = 0; i < NUM; i++) {
     assign({}, o);
   }
 });
