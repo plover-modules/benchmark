@@ -14,8 +14,8 @@ function genFixture(size) {
   const list = [];
   const depends = [];
   for (let i = 0; i < size; i++) {
-    list.push(util.randomString(util.random(10000)));
-    depends.push(util.randomString(util.random(10000)));
+    list.push(util.randomString(util.random(30000)));
+    depends.push(util.randomString(util.random(30000)));
   }
 
   return { list: list, depends: depends };
@@ -50,7 +50,7 @@ suite.mark('render with regexp', () => {
 });
 
 
-suite.mark('render with substr', () => {
+suite.mark('render with find & substr', () => {
   const sPlaceHolder = '##PLOVER_' + Date.now() + '_';
 
   let content = '';
@@ -63,7 +63,7 @@ suite.mark('render with substr', () => {
 
   let count = 0;
   const depends = fixture.depends;
-  suite.mark('replace', function() {
+  suite.mark('replace', () => {
     let last = 0;
     let pos = content.indexOf(sPlaceHolder, last);
     let skip = sPlaceHolder.length + 10;
@@ -73,6 +73,36 @@ suite.mark('render with substr', () => {
       last = pos + skip + 1;
       pos = content.indexOf(sPlaceHolder, last);
       const index = +content.substr(pos + sPlaceHolder.length, 10);
+      result += depends[index];
+      count++;
+    }
+  });
+
+  console.log(count);
+});
+
+
+suite.mark('render with split', function() {
+  const sPlaceHolder = '##PLOVER_' + Date.now() + '_';
+
+  let content = '';
+  suite.mark('prepare', () => {
+    fixture.list.forEach((html, index) => {
+      content += html;
+      content += sPlaceHolder + toFixed(index, 10);
+    });
+  });
+
+
+  let count = 0;
+  const depends = fixture.depends;
+  suite.mark('replace', () => {
+    const parts = content.split(sPlaceHolder);
+    let result = parts[0];
+    for (let i = 1, c = parts.length; i < c; i++) {
+      const str = parts[i]
+      const index = +str.substr(0, 10);
+      result += str.substr(10);
       result += depends[index];
       count++;
     }
