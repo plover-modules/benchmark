@@ -70,10 +70,10 @@ suite.mark('render with find & substr', () => {
     let result = '';
     while (pos !== -1) {
       result += content.substring(last, pos);
-      last = pos + skip + 1;
-      pos = content.indexOf(sPlaceHolder, last);
       const index = +content.substr(pos + sPlaceHolder.length, 10);
       result += depends[index];
+      last = pos + skip + 1;
+      pos = content.indexOf(sPlaceHolder, last);
       count++;
     }
   });
