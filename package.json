@@ -2,7 +2,9 @@
   "name": "benchmark",
   "version": "1.0.0",
   "description": "plover性能测试",
-  "scripts": {},
+  "scripts": {
+    "start": "NODE_ENV=production node app.js"
+  },
   "dependencies": {
     "plover": "~2.3.0",
     "plover-arttemplate": "~1.2.0",
