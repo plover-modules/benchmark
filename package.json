@@ -1,6 +1,6 @@
 {
   "name": "benchmark",
-  "version": "1.0.0",
+  "version": "2.3.0",
   "description": "plover性能测试",
   "scripts": {
     "start": "NODE_ENV=production node app.js"
