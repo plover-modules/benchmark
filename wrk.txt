@@ -5,9 +5,8 @@
 Running 30s test @ http://127.0.0.1:4000/render
   20 threads and 20 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   441.61ms   66.82ms 799.34ms   72.21%
-    Req/Sec     1.73      0.66     4.00     54.84%
-  1240 requests in 30.11s, 660.83MB read
-  Socket errors: connect 0, read 0, write 0, timeout 20
-Requests/sec:     41.19
-Transfer/sec:     21.95MB
+    Latency   413.18ms   40.75ms 669.70ms   73.82%
+    Req/Sec     1.99      0.53     4.00     72.36%
+  1440 requests in 30.06s, 767.42MB read
+Requests/sec:     47.90
+Transfer/sec:     25.53MB
