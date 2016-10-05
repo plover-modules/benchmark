@@ -15,7 +15,7 @@ for (let i = 0; i < NUM; i++) {
 
 
 let resultA = '';
-suite.mark('concat with join', function() {
+suite.mark('concat with Array.join', function() {
   resultA = list.join('');
 });
 

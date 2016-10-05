@@ -46,7 +46,6 @@ suite.mark('render with regexp', () => {
       return depends[index];
     });
   });
-  console.log(count);
 });
 
 
@@ -77,8 +76,6 @@ suite.mark('render with find & substr', () => {
       count++;
     }
   });
-
-  console.log(count);
 });
 
 
@@ -107,8 +104,6 @@ suite.mark('render with split', function() {
       count++;
     }
   });
-
-  console.log(count);
 });
 
 

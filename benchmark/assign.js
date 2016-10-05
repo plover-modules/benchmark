@@ -31,20 +31,20 @@ suite.mark('Object.assign', () => {
 });
 
 
-function assignA(des, src) {
+function forInAssign(des, src) {
   for (const k in src) {
     des[k] = src[k];
   }
 }
 
-suite.mark('assignA', () => {
+suite.mark('for in', () => {
   for (let i = 0; i < NUM; i++) {
-    assignA({}, o);
+    forInAssign({}, o);
   }
 });
 
 
-function assignB(des, src) {
+function assignWithObjectKeys(des, src) {
   const keys = Object.keys(src);
   for (let i = 0, c = keys.length; i < c; i++) {
     const key = keys[i];
@@ -53,9 +53,9 @@ function assignB(des, src) {
 }
 
 
-suite.mark('assignB', () => {
+suite.mark('iter with Object.keys', () => {
   for (let i = 0; i < NUM; i++) {
-    assignB({}, o);
+    assignWithObjectKeys({}, o);
   }
 });
 

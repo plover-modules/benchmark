@@ -1,14 +1,23 @@
 # benchmark
 
 
-## 启动
+## 测试框架中的频繁操作
+
+
+- benchmark/
+  - assign        // Object.assign的替代
+  - concat        // 字符串拼接
+  - render-child  // plover子模板的渲染
+  - route-info    // RouteInfo.parse
+
+
+## 测试页面渲染性能
 
 ```
 npm run start
 ```
 
-## 用于测试的页面
-
+## 使用压测工具访问以下页面
 
 ```
 http://127.0.0.1:4000/render

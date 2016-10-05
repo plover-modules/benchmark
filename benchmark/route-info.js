@@ -14,30 +14,30 @@ function parseWithIndexOf(parent, url) {
   }
 
   return {
-    module: url.substr(0, pos - 1),
+    module: url.substr(0, pos),
     action: url.substr(pos + 1)
   }
 }
 
 
-const re = /^(?:([-\w\/]+)[#:])?([-\w]+)/;
+const re = /^([-\w\/]+)[#:]([-\w]+)$/;
 function parseWithRegexp(parent, url) {
   const match = re.exec(url);
-  return {
-    module: match[1] || parent.module,
-    action: match[2]
-  };
+  if (match) {
+    return { module: match[1], action: match[2] };
+  }
+  return { module: parent.module, action: url };
 }
 
 
 const NUM = 1 * 1000 * 1000;
 
 suite.mark('parse with indexOf', () => {
-  for (let i = 0; i < NUM; i++) {
-    parseWithIndexOf({ module: 'photos' }, 'users#show');
+  for (let i = 0; i < 3 * NUM; i++) {
+    parseWithIndexOf({ module: 'photos' }, 'show');
   }
   for (let i = 0; i < NUM; i++) {
-    parseWithIndexOf({ module: 'photos' }, 'show');
+    parseWithIndexOf({ module: 'photos' }, 'users#show');
   }
   for (let i = 0; i < NUM; i++) {
     parseWithIndexOf({ module: 'photos' }, 'admin/users:show');
@@ -46,11 +46,11 @@ suite.mark('parse with indexOf', () => {
 
 
 suite.mark('parse with regexp', () => {
-  for (let i = 0; i < NUM; i++) {
-    parseWithRegexp({ module: 'photos' }, 'users#show');
+  for (let i = 0; i < 3 * NUM; i++) {
+    parseWithRegexp({ module: 'photos' }, 'show');
   }
   for (let i = 0; i < NUM; i++) {
-    parseWithRegexp({ module: 'photos' }, 'show');
+    parseWithRegexp({ module: 'photos' }, 'users#show');
   }
   for (let i = 0; i < NUM; i++) {
     parseWithIndexOf({ module: 'photos' }, 'admin/users:show');
@@ -59,11 +59,11 @@ suite.mark('parse with regexp', () => {
 
 
 suite.mark('RouteInfo.parse', () => {
-  for (let i = 0; i < NUM; i++) {
-    RouteInfo.parse({ module: 'photos' }, 'users#show');
+  for (let i = 0; i < 3 * NUM; i++) {
+    RouteInfo.parse({ module: 'photos' }, 'show');
   }
   for (let i = 0; i < NUM; i++) {
-    RouteInfo.parse({ module: 'photos' }, 'show');
+    RouteInfo.parse({ module: 'photos' }, 'users#show');
   }
   for (let i = 0; i < NUM; i++) {
     RouteInfo.parse({ module: 'photos' }, 'admin/users:show');
