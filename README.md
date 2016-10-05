@@ -4,15 +4,13 @@
 ## 测试框架中的频繁操作
 
 
+```
 - benchmark/
-  - assign  
-    Object.assign的替代  
-  - concat  
-    字符串拼接  
-  - render-child  
-    plover子模板的渲染  
-  - route-info  
-    RouteInfo.parse  
+  - assign        // Object.assign的替代
+  - concat        // 字符串拼接
+  - render-child  // plover子模板的渲染
+  - route-info    // RouteInfo.parse
+```
 
 
 ## 测试页面渲染性能
