@@ -24,12 +24,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/plover-modules/benchmark.git"
+    "url": "git+https://github.com/ploverjs/benchmark.git"
   },
   "author": "bencode@163.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/plover-modules/benchmark/issues"
+    "url": "https://github.com/ploverjs/benchmark/issues"
   },
-  "homepage": "https://github.com/plover-modules/benchmark#readme"
+  "homepage": "https://github.com/ploverjs/benchmark#readme"
 }
