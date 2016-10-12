@@ -40,3 +40,17 @@ Running 30s test @ http://127.0.0.1:4000/render
 Requests/sec:     45.87
 Transfer/sec:     24.45MB
 ````
+
+### with birdbird
+
+```
+➜  benchmark git:(master) ✗ wrk -t20 -c20 -d30s http://127.0.0.1:4000/render
+Running 30s test @ http://127.0.0.1:4000/render
+  20 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   355.40ms   27.22ms 493.69ms   80.73%
+    Req/Sec     2.55      0.55     4.00     55.80%
+  1681 requests in 30.10s, 0.87GB read
+Requests/sec:     55.85
+Transfer/sec:     29.76MB
+```
