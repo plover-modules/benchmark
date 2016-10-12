@@ -6,17 +6,7 @@
     "start": "NODE_ENV=production node app.js"
   },
   "dependencies": {
-    "plover": "~2.7.0",
-    "plover-arttemplate": "~3.0.0",
-    "plover-assets": "~2.2.0",
-    "plover-assets-less": "~1.2.1",
-    "plover-assets-vendor": "~1.0.3",
-    "plover-assets-webpack": "~1.1.0",
-    "plover-benchmark": "~1.0.0",
-    "plover-ejs": "~1.0.0",
-    "plover-util": "~1.4.0",
-    "plover-web-util": "~1.0.0",
-    "plover-xview": "~1.1.0"
+    "ploverx": "~2.1.0"
   },
   "devDependencies": {
     "eslint": "~3.7.1",

@@ -1,43 +1,13 @@
 'use strict';
 
 
-/* eslint no-process-env: 0 */
-
-
 const pathUtil = require('path');
-
-
-exports = module.exports = {
-
-  /**
-   * 应用根目录
-   */
-  applicationRoot: pathUtil.join(__dirname, '..'),
-
-  /**
-   * 环境
-   */
-  env: process.env.NODE_ENV,
-
-  /**
-   * 配置根目录
-   */
-  configRoot: __dirname
-};
-
 
 /**
  * 服务器相关配置
  */
 exports.server = {
   port: 4000
-};
-
-
-/**
- * 路由规则
- */
-exports.routes = {
 };
 
 
@@ -70,7 +40,7 @@ exports.web = {
   keys: ['17e6b6bc6129097383dcad4fa1602233'],
 
   // https://github.com/koajs/favicon
-  // favicon: pathUtil.join(__dirname, '../public/favicon.ico'),
+  favicon: pathUtil.join(__dirname, '../public/favicon.ico'),
 
   // https://github.com/koajs/response-time
   rtime: {}
