@@ -53,7 +53,7 @@ Requests/sec:     45.20
 Transfer/sec:     23.99MB
 ```
 
-### with birdbird
+### with bluebird
 
 ```
 ➜  benchmark git:(master) ✗ wrk -t20 -c20 -d30s http://127.0.0.1:4000/render
