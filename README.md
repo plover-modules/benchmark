@@ -39,7 +39,19 @@ Running 30s test @ http://127.0.0.1:4000/render
   1498 requests in 30.09s, 798.33MB read
 Requests/sec:     49.79
 Transfer/sec:     26.53MB
-````
+```
+
+```
+➜  benchmark git:(master) ✗ wrk -t20 -c20 -d30s http://127.0.0.1:4000/renderejs
+Running 30s test @ http://127.0.0.1:4000/renderejs
+  20 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   438.65ms   41.56ms 688.24ms   73.01%
+    Req/Sec     1.75      0.53     4.00     66.03%
+  1360 requests in 30.09s, 721.87MB read
+Requests/sec:     45.20
+Transfer/sec:     23.99MB
+```
 
 ### with birdbird
 
@@ -53,4 +65,16 @@ Running 30s test @ http://127.0.0.1:4000/render
   1828 requests in 30.09s, 0.95GB read
 Requests/sec:     60.74
 Transfer/sec:     32.37MB
+```
+
+```
+➜  benchmark git:(master) ✗ wrk -t20 -c20 -d30s http://127.0.0.1:4000/renderejs
+Running 30s test @ http://127.0.0.1:4000/renderejs
+  20 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   363.57ms   24.53ms 485.03ms   76.02%
+    Req/Sec     2.46      0.52     4.00     51.91%
+  1647 requests in 30.10s, 0.85GB read
+Requests/sec:     54.72
+Transfer/sec:     29.04MB
 ```
