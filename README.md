@@ -29,52 +29,26 @@ http://127.0.0.1:4000/renderejs
 
 ## benchmark
 
+### ploverx@2.1.0, node v7.7.4
+
 ```
-➜  benchmark git:(master) ✗ wrk -t20 -c20 -d30s http://127.0.0.1:4000/render
 Running 30s test @ http://127.0.0.1:4000/render
   20 threads and 20 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   399.54ms   38.90ms 604.48ms   68.29%
-    Req/Sec     2.12      0.55     4.00     68.83%
-  1498 requests in 30.09s, 798.33MB read
-Requests/sec:     49.79
-Transfer/sec:     26.53MB
+    Latency   347.06ms   36.80ms 535.77ms   81.74%
+    Req/Sec     2.62      0.66    10.00     95.81%
+  1720 requests in 30.08s, 0.90GB read
+Requests/sec:     57.18
+Transfer/sec:     30.47MB
 ```
 
 ```
-➜  benchmark git:(master) ✗ wrk -t20 -c20 -d30s http://127.0.0.1:4000/renderejs
 Running 30s test @ http://127.0.0.1:4000/renderejs
   20 threads and 20 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   438.65ms   41.56ms 688.24ms   73.01%
-    Req/Sec     1.75      0.53     4.00     66.03%
-  1360 requests in 30.09s, 721.87MB read
-Requests/sec:     45.20
-Transfer/sec:     23.99MB
-```
-
-### with bluebird
-
-```
-➜  benchmark git:(master) ✗ wrk -t20 -c20 -d30s http://127.0.0.1:4000/render
-Running 30s test @ http://127.0.0.1:4000/render
-  20 threads and 20 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   326.47ms   28.53ms 515.41ms   79.10%
-    Req/Sec     2.82      0.47     5.00     77.74%
-  1828 requests in 30.09s, 0.95GB read
-Requests/sec:     60.74
-Transfer/sec:     32.37MB
-```
-
-```
-➜  benchmark git:(master) ✗ wrk -t20 -c20 -d30s http://127.0.0.1:4000/renderejs
-Running 30s test @ http://127.0.0.1:4000/renderejs
-  20 threads and 20 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   363.57ms   24.53ms 485.03ms   76.02%
-    Req/Sec     2.46      0.52     4.00     51.91%
-  1647 requests in 30.10s, 0.85GB read
-Requests/sec:     54.72
-Transfer/sec:     29.04MB
+    Latency   395.45ms   27.69ms 642.86ms   74.32%
+    Req/Sec     2.18      0.49     4.00     72.79%
+  1507 requests in 30.11s, 799.89MB read
+Requests/sec:     50.06
+Transfer/sec:     26.57MB
 ```
