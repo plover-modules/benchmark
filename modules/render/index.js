@@ -1,22 +1,19 @@
-'use strict';
-
-
-exports.single = function* () {
-  yield sleep(100);
-  this.layout = false;
-  this.render();
+exports.single = async (ctx) => {
+  await sleep(100);
+  ctx.layout = false;
+  ctx.render();
 };
 
 
-exports.view = function* () {
-  this.layout = {
+exports.view = async (ctx) => {
+  ctx.layout = {
     name: 'layout',
     data: {
       title: '淘宝 - 特色中国，再一次发现中国！发现最正宗的特色、美食、工艺品、老字号。'
     }
   };
 
-  yield sleep(20);
+  await sleep(20);
   const data = {
     list: [
       'A',
@@ -38,91 +35,92 @@ exports.view = function* () {
       { name: 'D' }
     ]
   };
-  this.render(data);
+
+  ctx.render(data);
 };
 
 
-exports.layout = function* () {
+exports.layout = async (ctx) => {
   const data = {
     spm: {
       id: 'a216r',
       value: '8181401'
     }
   };
-  yield sleep(20);
-  this.render(data);
+  await sleep(20);
+  ctx.render(data);
 };
 
 
-exports.header = function* () {
-  yield sleep(20);
-  this.render();
+exports.header = async (ctx) => {
+  await sleep(20);
+  ctx.render();
 };
 
 
-exports.footer = function* () {
-  yield sleep(20);
-  this.render();
+exports.footer = async (ctx) => {
+  await sleep(20);
+  ctx.render();
 };
 
 
-exports.banner = function* () {
-  yield sleep(20);
-  this.render();
+exports.banner = async (ctx) => {
+  await sleep(20);
+  ctx.render();
 };
 
 
-exports.todayRecommend = function* () {
-  yield sleep(20);
-  this.render();
+exports.todayRecommend = async (ctx) => {
+  await sleep(20);
+  ctx.render();
 };
 
 
-exports.newRoom = function* () {
-  yield sleep(20);
-  this.render();
+exports.newRoom = async (ctx) => {
+  await sleep(20);
+  ctx.render();
 };
 
 
-exports.cats = function* () {
-  yield sleep(20);
-  this.render();
+exports.cats = async (ctx) => {
+  await sleep(20);
+  ctx.render();
 };
 
 
-exports.likeRecommend = function* () {
-  yield sleep(20);
-  this.render();
+exports.likeRecommend = async (ctx) => {
+  await sleep(20);
+  ctx.render();
 };
 
 
-exports.darenRecommend = function* () {
-  yield sleep(20);
-  this.render();
+exports.darenRecommend = async (ctx) => {
+  await sleep(20);
+  ctx.render();
 };
 
 
-exports.newBlock = function* () {
-  yield sleep(20);
-  this.render();
+exports.newBlock = async (ctx) => {
+  await sleep(20);
+  ctx.render();
 };
 
 
-exports.oldBlock = function* () {
-  yield sleep(20);
-  this.render();
+exports.oldBlock = async (ctx) => {
+  await sleep(20);
+  ctx.render();
 };
 
 
-exports.city = function* () {
-  yield sleep(20);
-  this.render();
+exports.city = async (ctx) => {
+  await sleep(20);
+  ctx.render();
 };
 
 
-exports.bottom = function* () {
-  yield sleep(20);
-  this.render();
+exports.bottom = async (ctx) => {
+  await sleep(20);
+  ctx.render();
 };
 
 

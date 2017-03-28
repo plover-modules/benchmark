@@ -1,6 +1,3 @@
-'use strict';
-
-
 const assign = require('plover-util/lib/assign');
 
 const Suite = require('./suite');

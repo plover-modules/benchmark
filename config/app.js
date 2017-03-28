@@ -1,6 +1,3 @@
-'use strict';
-
-
 const pathUtil = require('path');
 
 /**
@@ -72,13 +69,6 @@ exports.assets = {
   concatItems: [
     { match: /^\/g\/(.*)$/, prefix: '/g/??' }
   ]
-};
-
-
-/**
- * xview插件相关配置
- */
-exports.xview = {
 };
 
 
