@@ -145,7 +145,11 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.4.6, bluebird@~3.4.6:
+bluebird@^3.5.0:
+  version "3.5.0"
+  resolved "https://r.cnpmjs.org/bluebird/download/bluebird-3.5.0.tgz#791420d7f551eea2897453a8a77653f96606d67c"
+
+bluebird@~3.4.6:
   version "3.4.7"
   resolved "https://r.cnpmjs.org/bluebird/download/bluebird-3.4.7.tgz#f72d760be09b7f76d08ed8fae98b289a8d05fab3"
 
@@ -332,15 +336,15 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-debug@*, debug@^2.2, debug@^2.3.2:
-  version "2.6.0"
-  resolved "https://r.cnpmjs.org/debug/download/debug-2.6.0.tgz#bc596bcabe7617f11d9fa15361eded5608b8499b"
+debug@*, debug@^2.2, debug@^2.2.0, debug@^2.6.0, debug@~2.6.1, debug@~2.6.3:
+  version "2.6.3"
+  resolved "https://r.cnpmjs.org/debug/download/debug-2.6.3.tgz#0f7eb8c30965ec08c72accfa0130c8b79984141d"
   dependencies:
     ms "0.7.2"
 
-debug@^2.2.0, debug@^2.6.0, debug@~2.6.0, debug@~2.6.1, debug@~2.6.3:
-  version "2.6.3"
-  resolved "https://r.cnpmjs.org/debug/download/debug-2.6.3.tgz#0f7eb8c30965ec08c72accfa0130c8b79984141d"
+debug@^2.3.2, debug@~2.6.0:
+  version "2.6.0"
+  resolved "https://r.cnpmjs.org/debug/download/debug-2.6.0.tgz#bc596bcabe7617f11d9fa15361eded5608b8499b"
   dependencies:
     ms "0.7.2"
 
@@ -349,12 +353,6 @@ debug@~2.2.0:
   resolved "https://r.cnpmjs.org/debug/download/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
   dependencies:
     ms "0.7.1"
-
-debug@~2.3.0:
-  version "2.3.3"
-  resolved "https://r.cnpmjs.org/debug/download/debug-2.3.3.tgz#40c453e67e6e13c901ddec317af8986cda9eff8c"
-  dependencies:
-    ms "0.7.2"
 
 deep-equal@~1.0.0:
   version "1.0.1"
@@ -1275,27 +1273,13 @@ plover-ejs@~1.1.0:
   dependencies:
     ejs "~2.5.2"
 
-plover-logger@~1.4.0, plover-logger@~1.4.4:
+plover-logger@~1.4.0, plover-logger@~1.4.1, plover-logger@~1.4.4:
   version "1.4.4"
   resolved "https://r.cnpmjs.org/plover-logger/download/plover-logger-1.4.4.tgz#2da141ecd8556f46ee3f3865aeb5151de256ce30"
   dependencies:
     debug "~2.6.1"
 
-plover-logger@~1.4.1:
-  version "1.4.3"
-  resolved "https://r.cnpmjs.org/plover-logger/download/plover-logger-1.4.3.tgz#2262f866a792742db524e4e8f96aa6a37430e349"
-  dependencies:
-    debug "~2.3.0"
-
-plover-module-resolver@~1.6.5:
-  version "1.6.5"
-  resolved "https://r.cnpmjs.org/plover-module-resolver/download/plover-module-resolver-1.6.5.tgz#9a9822aac037b1324650b7b691d39c0337201863"
-  dependencies:
-    debug "~2.2.0"
-    resolve-from "~2.0.0"
-    semver "~5.3.0"
-
-plover-module-resolver@~1.6.6:
+plover-module-resolver@~1.6.5, plover-module-resolver@~1.6.6:
   version "1.6.7"
   resolved "https://r.cnpmjs.org/plover-module-resolver/download/plover-module-resolver-1.6.7.tgz#aa40e0d323f6da878db48d5c5259177ad91f30f9"
   dependencies:
