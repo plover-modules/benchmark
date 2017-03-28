@@ -1,6 +1,3 @@
-'use strict';
-
-
 const util = require('./util');
 const Suite = require('./suite');
 

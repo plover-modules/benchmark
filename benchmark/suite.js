@@ -1,6 +1,3 @@
-'use strict';
-
-
 /* eslint no-console: 0 */
 
 
